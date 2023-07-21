@@ -1,9 +1,10 @@
-import React from 'react'
-
-function Reducer() {
-  return (
-    <div>Reducer</div>
-  )
+import {ADD_TO_CART} from './constant';
+export const cartData = (data=[],action)=> {
+  // console.warn("Reducer called",action)
+  if(action.type=== ADD_TO_CART){
+    console.warn("reducer called", action)
+    return action.data
+  } else {
+    return "no action matched"
+  }
 }
-
-export default Reducer
